@@ -42,14 +42,23 @@
       function addNote() {
         const text = document.getElementById("noteText").value;
         const color = document.getElementById("colorPicker").value;
+        const noteDisplay = document.getElementById("noteDisplay");
         const noteEle = document.createElement("div");
         noteEle.classList.add("noteBox");
-
         noteEle.innerHTML = text;
         noteEle.style.backgroundColor = color;
 
-        document.getElementById("noteDisplay").appendChild(noteEle);
+        const btn2 = document.createElement("a");
+        btn2.classList.add("closeBtn");
+        noteEle.append(btn2);
+        btn2.innerHTML = "&times;"
 
+        const cross= noteEle.querySelector(".closeBtn")
+        cross.addEventListener("click", ()=>{
+          noteEle.style.display="none";
+        })
+
+        document.getElementById("noteDisplay").appendChild(noteEle);
         document.getElementById("noteText").value = "";
       }
     </script>
