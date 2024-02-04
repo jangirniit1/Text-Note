@@ -4,11 +4,13 @@ btn.addEventListener("click", addNote);
 function addNote() {
   const text = document.getElementById("noteText").value;
   const color = document.getElementById("colorPicker").value;
+  const textColor = document.getElementById("textColor").value;
   const noteDisplay = document.getElementById("noteDisplay");
   const noteEle = document.createElement("div");
   noteEle.classList.add("noteBox");
   noteEle.innerHTML = text;
   noteEle.style.backgroundColor = color;
+  noteEle.style.color = textColor;
 
   const btn2 = document.createElement("a");
   btn2.classList.add("closeBtn");

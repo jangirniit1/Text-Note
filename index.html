@@ -24,7 +24,16 @@
         <!-- <input type="text" id="noteText" /> -->
         <textarea id="noteText" placeholder="Write a text here"></textarea>
 
-        <input type="color" id="colorPicker" />
+        <div class="colors">
+          <div class="backColor">
+            <input type="color" id="colorPicker" />
+            <h2>Bg color</h2>
+          </div>
+          <div class="frontColor">
+            <input type="color" id="textColor" value="#ffffff" />
+            <h2>Text color</h2>
+          </div>
+        </div>
       </div>
 
       <button id="btn">Add Note</button>
