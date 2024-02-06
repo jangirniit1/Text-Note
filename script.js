@@ -9,6 +9,7 @@ function addNote() {
   const noteEle = document.createElement("div");
   noteEle.classList.add("noteBox");
   noteEle.innerHTML = text;
+  noteEle.contentEditable = true;
   noteEle.style.backgroundColor = color;
   noteEle.style.color = textColor;
 
